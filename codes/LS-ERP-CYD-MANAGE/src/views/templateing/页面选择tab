@@ -1,0 +1,26 @@
+<template>
+<select-page :list="list" v-model="activeName">
+          <div class="font-title-drive">
+            基础信息
+          </div>
+</select-page>
+</template>
+<script>
+import SelectPage from "@/components/SelectPage"
+ export default {
+   name:'TabPage',
+   components:{
+     SelectPage
+   },
+   data(){
+     return{
+       activeName: 'first',
+       list: [
+         {label: '基础信息',name: 'first'},
+         {label: '生产基地',name: 'second'},
+       ]
+     }
+   }
+
+ }
+</script>

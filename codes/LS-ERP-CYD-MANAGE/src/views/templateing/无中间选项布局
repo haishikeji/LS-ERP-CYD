@@ -1,0 +1,18 @@
+<template>
+<SpecialLayout>
+</SpecialLayout>
+</template>
+<script>
+import SpecialLayout from "@/components/SpecialLayout"
+ export default {
+   name:'TabPage',
+   components:{
+     SpecialLayout
+   },
+   data(){
+     return{
+     }
+   }
+
+ }
+</script>

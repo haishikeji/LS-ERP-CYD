@@ -1,0 +1,110 @@
+.card{
+    padding: 20rpx 0;
+    border-bottom: 1rpx solid #eee;
+
+.tips{
+    color: #EA3C3C;
+}
+
+.tip{
+    margin-left: 20rpx;
+    font-size: 26rpx;
+}
+
+.desc-title{
+    font-size: 32rpx;
+    color: #202020;
+    line-height: 1.5;
+}
+
+.line-group{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.line{
+    flex-basis: calc(100% / 2 - 10rpx);
+    flex-shrink: 1;
+    background: #F8F8F8;
+    position: relative;
+    padding: 20rpx;
+
+    .line-title{
+        color: #666;
+        font-size: 28rpx;
+        line-height: 2;
+    }
+
+    .line-font{
+        color: #8B6445;
+        font-size: 28rpx;
+        line-height: 2;
+    }
+
+    .line-input{
+        display: flex;
+        width: 100%;
+        align-items: center;
+
+        .input{
+            background: #fff;
+            margin-right: 17rpx;
+        }
+
+        .unit{
+            //width: 100rpx;
+            font-size: 28rpx;
+            color: #202020;
+        }
+
+    }
+
+  }
+}
+
+.staff-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+.title-name {
+    font-size: 36rpx;
+    color: #202020;
+}
+
+.icon {
+    width: 25rpx;
+    height: 25rpx;
+}
+}
+
+.staff-desc {
+    display: flex;
+    justify-content: flex-start;
+    margin: 10rpx 0 10rpx 0;
+
+.desc {
+    padding: 7rpx 12rpx;
+    background-color: #FAF3EE;
+    border-radius: 4rpx;
+    font-size: 24rpx;
+    color: #8B6445;
+}
+
+.specification {
+    margin-left: 16rpx;
+    font-size: 28rpx;
+    color: #666666;
+    line-height: 1.5;
+}
+}
+
+.red{
+    .line-title{
+        color: #EA3C3C!important;
+        .unit{
+            color: #EA3C3C!important;
+        }
+    }
+
+}

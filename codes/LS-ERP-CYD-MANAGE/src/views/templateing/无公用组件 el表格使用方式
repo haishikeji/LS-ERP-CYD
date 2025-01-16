@@ -1,0 +1,137 @@
+<template>
+    <div style="padding: 30px">
+
+        <el-table
+            :data="tableData"
+            border
+            header-cell-class-name="header-bg"
+            style="width: 100%">
+            <el-table-column
+                prop="name"
+                label="产品名称/规格/编码"
+                width="300">
+                <template slot-scope="{row}">
+                    <span v-if="!row.edit">{{ row.name }}</span>
+                    <div v-else>
+                    </div>
+                </template>
+            </el-table-column>
+            <el-table-column
+                align="center"
+                prop="count"
+                label="当前库存"
+                width="110">
+                <template slot-scope="{row}">
+                    <span v-if="!row.edit">{{ row.count }}</span>
+                </template>
+            </el-table-column>
+            <el-table-column
+                width="80"
+                align="center"
+                prop="unit"
+                label="单位">
+                <template slot-scope="{row}">
+                    <span v-if="!row.edit">{{ row.unit }}</span>
+                </template>
+            </el-table-column>
+            <el-table-column
+                prop="number"
+                label="数量">
+                <template slot-scope="{row}">
+                    <span v-if="!row.edit">{{ row.number }}</span>
+                </template>
+            </el-table-column>
+            <el-table-column
+                prop="costPrice"
+                label="成本价">
+                <template slot-scope="{row}">
+                    <span v-if="!row.edit">{{ row.costPrice }}</span>
+                </template>
+            </el-table-column>
+            <el-table-column
+                width="110px"
+                prop="salesPrice"
+                align="right"
+                label="总金额">
+                <template slot-scope="{row}">
+                    <span v-if="!row.edit">{{ row.salesPrice }}</span>
+                </template>
+            </el-table-column>
+            <el-table-column
+                width="80px"
+               align="center"
+                label="操作">
+                <template slot-scope="{row}">
+                    <el-button v-if="!row.edit" type="text">删除</el-button>
+                </template>
+            </el-table-column>
+        </el-table>
+        <div class="table-bottom">
+            <span>合计: 共</span>
+            <span>2</span>
+            <span>种</span>
+            <span>件产品, 合计金额：</span>
+            <span>0.00</span>
+        </div>
+    </div>
+</template>
+<script>
+export default {
+  data(){
+    return{
+      tableData: [
+        {
+          edit: true,
+          count: '',
+          name: '',
+          unit: '',
+          number: '',
+          costPrice:'',
+          salesPrice: ''
+        },
+        {
+            edit:false,
+            count: '20',
+            name: '九天流香·云中涧肉桂',
+            unit: '单位',
+            number: '2',
+            costPrice:'3999.00',
+            salesPrice: '7998.00'
+        }]
+    }
+  },
+  props:{
+    tableList:{
+      type: Array,
+      default(){
+        return {}
+      }
+    }
+  }
+}
+</script>
+<style lang="scss">
+    $bg-color:#F7F7F7;
+    .header-bg{
+        color: #666;
+        background-color: $bg-color!important;
+    }
+    .table-bottom{
+        height: 48px;
+        padding: 12px;
+        box-sizing: border-box;
+
+        border-width: 1px;
+        border-style: solid;
+        border-bottom-color:  #eeeeee;
+        border-left-color:  #eeeeee;
+        border-right-color:  #eeeeee;
+        border-top-color: transparent;
+        background-color: $bg-color;
+
+        color: #333;
+        font-size: 14px;
+        vertical-align: middle;
+        line-height: 1.5;
+    }
+</style>

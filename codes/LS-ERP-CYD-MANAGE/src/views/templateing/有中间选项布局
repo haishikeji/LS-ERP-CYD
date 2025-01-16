@@ -1,0 +1,24 @@
+<template>
+<SpecialLayout>
+    <IntermediateOption>
+        <el-button style="margin: 8px 0">商品信息</el-button>
+        <el-button style="margin: 8px 0" type="primary" plain>会员卡项</el-button>
+    </IntermediateOption>
+</SpecialLayout>
+</template>
+<script>
+import SpecialLayout from "@/components/SpecialLayout"
+import IntermediateOption from "@/components/SpecialLayout/components/IntermediateOption"
+ export default {
+   name:'TabPage',
+   components:{
+     SpecialLayout,
+     IntermediateOption
+   },
+   data(){
+     return{
+     }
+   }
+
+ }
+</script>
